@@ -1,0 +1,20 @@
+
+@media (min-width: 1080px){
+  .site-header .main-navigation.style-1 .wrap_branding {
+      width: 23%;
+  }
+
+  .site-header .main-navigation.style-1 .main-menu {
+      width: 61%;
+  }
+  .site-header .main-navigation.style-1 .search-navigation {
+      width: 16%;
+  }
+}
+
+@media (max-width: 992px)
+{
+  .main-navigation .main-menu {
+    display: none!important;
+  }
+}

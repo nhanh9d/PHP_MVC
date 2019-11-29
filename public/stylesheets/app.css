@@ -1,0 +1,108 @@
+.wrap {
+  position: relative;
+  overflow: hidden;
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+    font-family: poppins,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #888;
+    -webkit-font-smoothing: antialiased!important;
+    -moz-osx-font-smoothing: grayscale!important;
+}
+.body-wrap {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+article, aside, footer, header, nav, section {
+  display: block;
+}
+input:not([type]), input[type=color], input[type=email], input[type=number], input[type=password], input[type=tel], input[type=url], input[type=text], input[type=search], textarea, select {
+  -webkit-appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid rgba(45,45,45,.3);
+  background-color: transparent;
+  color: #333;
+}
+button, input {
+  overflow: visible;
+}
+button, input, optgroup, select, textarea {
+  margin: 0;
+}
+a {
+  -webkit-transition: color 200ms ease,background-color 200ms ease;
+  -moz-transition: color 200ms ease,background-color 200ms ease;
+  -o-transition: color 200ms ease,background-color 200ms ease;
+  transition: color 200ms ease,background-color 200ms ease;
+  color: #333;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+img {
+    border-style: none;
+    max-width: 100%;
+    height: auto;
+}
+button, select {
+    text-transform: none;
+}
+button, input {
+    overflow: visible;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+}
+button, html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 {
+    font-weight: 600;
+    line-height: 1.2;
+    color: #333;
+}
+h1, .h1 {
+    font-size: 34px;
+}
+
+.widget.widget_tag_cloud .tag-cloud-link:hover, body.page .c-page-content .c-page .c-page__content .page-content-listing .page-listing-item .page-item-detail .item-summary .list-chapter .chapter-item .chapter:hover, .popular-slider .slider__container .slider__item .slider__content .slider__content_item .chapter-item .chapter a:hover, .widget.c-popular .popular-item-wrap .popular-content .chapter-item .chapter:hover, .site-footer .top-footer .wrap_social_account ul.social_account__item li a, .site-content .main-col .item-tags ul li a:hover, .popular-slider .slider__container .slick-arrow:hover, .widget.background.widget_tag_cloud .tag-cloud-link:hover, .wp-pagenavi a:hover, body.search.search-results .search-wrap .tab-content-wrap .c-tabs-item .c-tabs-item__content .tab-meta .latest-chap .chapter:hover, .go-to-top:hover, .widget.c-popular .widget-view-more, body.search .c-search-header__wrapper .search-content .search-form .search-submit, body.reading-manga .entry-header .select-pagination .nav-links .nav-next a:not(:hover), body.reading-manga .c-select-bottom .select-pagination .nav-links .nav-next a:not(:hover), body.reading-manga .entry-header .entry-header_wrap .action-icon ul li:hover a, body.reading-manga .c-select-bottom .entry-header_wrap .action-icon ul li:hover a, .widget.c-released .released-search form [type="submit"], body.manga-page .profile-manga .tab-summary .loader-inner > div, .wpcf7-submit, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt, .woocommerce .woocommerce-cart-form .cart button.button, .woocommerce .cart input.button:not(:hover), #adult_modal .modal-footer .btn.btn-primary:not(:hover), body.reading-manga .entry-header .select-pagination .nav-links > * a, body.reading-manga .c-select-bottom .select-pagination .nav-links > * a, .settings-page .list-chapter .chapter-item .chapter:hover, body .modal .modal-content .modal-body .login .submit .wp-submit:not(:hover), .settings-page .tabs-content-wrap .my_account_orders a.button.view, .main-bg {
+    background-color: #41855e;
+}
+a:hover,[type=submit]:hover,[type=reset]:hover {
+  cursor: pointer;
+}
+
+
+
+/*dashboard*/
+.woocommerce ul.products li.product .button {
+    margin-top: 17px;
+    padding: 11px 30px;
+    background: #eb3349;
+    color: #fff;
+}
+.widget.c-popular .widget-view-more, #comments.comments-area #respond.comment-respond .comment-form .form-submit #submit, .site-header .search-main-menu form input[type=submit], body.search .c-search-header__wrapper .search-content .search-form .search-submit, .c-btn.c-btn_style-1, .settings-page input[type="submit"], .settings-page .remove-all #delete-bookmark-manga, body.reading-manga .entry-header .select-pagination .nav-links .nav-next a:not(:hover), body.reading-manga .c-select-bottom .select-pagination .nav-links .nav-next a:not(:hover), .widget.c-released .released-search form [type="submit"], .wpcf7-submit, .woocommerce ul.products li.product .button, .woocommerce .woocommerce-pagination .page-numbers li span.current, .woocommerce .widget_shopping_cart .buttons a:not(:hover), .woocommerce.widget_shopping_cart .buttons a:not(:hover), .widget_price_filter .price_slider_amount button, .woocommerce div.product form.cart .button, .woocommerce .cart-collaterals .checkout-button.button.alt, .woocommerce button.button.alt, .woocommerce a.button.alt, .woocommerce .woocommerce-cart-form .cart button.button, .woocommerce .woocommerce-cart-form .cart button.button, .woocommerce .cart input.button:not(:hover) {
+    color: #ffffff;
+}
+.woocommerce .products .product {
+    text-align: center;
+}
