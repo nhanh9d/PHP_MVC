@@ -67,7 +67,7 @@
     font-size: 14px;
     vertical-align: middle;
 }
-.site-header .c-sub-header-nav .c-sub-nav_wrap .c-modal_item .btn-active-modal {
+.site-header .c-sub-header-nav .c-sub-nav_wrap .c-modal_item .btn-active-modal,.btn-detail-page {
     color: #666;
     font-weight: 600;
     display: inline-block;

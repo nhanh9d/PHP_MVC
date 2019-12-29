@@ -6,7 +6,7 @@ abstract class Controller {
 
   private $args = 0;
 
-  private $params = [];
+  protected $params = [];
 
   private $currentModel;
 

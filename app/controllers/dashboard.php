@@ -7,7 +7,7 @@ class Dashboard extends Controller {
      */
     function Index () {
 
-          $bookModel = $this->model('book');
+          $bookModel = $this->model('BookModel');
 
           $viewData = array(
               'books' => $bookModel->getAllBooks()
