@@ -31,14 +31,22 @@ class Login extends Controller {
         $userModel = $this->model('user');
         $result = $userModel->getUser($username,$password);
         if(!is_null($result)){
-            print_r($result);
             $_SESSION['client'] = $result;
             header('Location: /');
         }
     }
 
     function register(){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $result = 'Có lỗi khi đăng ký';
 
+        $userModel = $this->model('user');
+        $result = $userModel->registerUser($username,$password);
+        if(!is_null($result)){
+            $result = 'Đăng ký thành công';
+        }
+        print $result;
     }
 
     /*

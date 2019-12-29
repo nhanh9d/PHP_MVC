@@ -96,6 +96,42 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="form-register" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <div id="register" class="login">
+              <h2>
+                Đăng ký
+              </h2>
+              <form name="registerform" id="registerform" method="post" action="login/register">
+                <p>
+                  <label>Tên tài khoản * <br> <input type="text" name="username" id="reg_username" class="input user_name" value="" size="20">
+                  </label>
+                </p>
+                <p>
+                  <label>Mật khẩu * <br> <input type="password" name="password" id="reg_password" class="input user_pass" value="" size="20">
+                  </label>
+                </p>
+                <p>
+                  <label>Nhắc lại mật khẩu * <br> <input type="password" name="password_confirm" id="reg_password_confirm" class="input user_pass" value="" size="20">
+                  </label>
+                </p>
+                <p class="submit">
+                  <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" id="btn_register_form" value="Đăng ký">
+                </p>
+              </form>
+              <p class="message register"></p>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="/public/javascripts/app.js"></script>
 </body>

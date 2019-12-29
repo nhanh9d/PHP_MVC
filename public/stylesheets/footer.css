@@ -72,10 +72,10 @@ body .modal .modal-content .modal-header, body .modal .modal-content .modal-foot
     padding: 0;
     border-bottom: none;
 }
-body .modal .modal-content .modal-body .login #loginform {
+body .modal .modal-content .modal-body .login #loginform,body .modal .modal-content .modal-body .login #loginform {
     font-size: 0;
 }
-body .modal .modal-content .modal-body .login #loginform>* {
+body .modal .modal-content .modal-body .login #loginform>*,body .modal .modal-content .modal-body .login #registerform>* {
     font-size: 14px;
 }
 body .modal .modal-content .modal-body .login label {
@@ -93,9 +93,6 @@ body .modal .modal-content .modal-body .login input[type=text], body .modal .mod
     border-radius: 5px;
     margin-top: 14px;
     background-color: #fff;
-}
-body .modal .modal-content .modal-body .login #loginform>* {
-    font-size: 14px;
 }
 body .modal .modal-content .modal-body .login .submit .wp-submit {
     width: 100%;
