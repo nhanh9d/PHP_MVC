@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Example page</title>
+  <title>Index</title>
   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins%3A100%2C100i%2C200%2C200i%2C300%2C300i%2C400%2C400i%2C500%2C500i%2C600%2C600i%2C700%2C700i%2C800%2C800i%2C900%2C900i&#038;ver=4.9.12' type='text/css' media='all' />
   <link rel="stylesheet" href="/public/stylesheets/app.css">
   <link rel="stylesheet" href="/public/stylesheets/bootstrap.min.css">
@@ -36,7 +36,7 @@
                 <div class="col-md-12">
                   <div class="main-navigation_wrap">
                     <div class="wrap_branding">
-                      <a class="logo" href="https://comicola.com/" title="Comicola">
+                      <a class="logo" href="/" title="Comicola">
                         <img class="img-responsive" src="https://comicola.com/wp-content/uploads/2018/10/comicola.png" alt="Comicola" />
                       </a>
                     </div>
@@ -44,7 +44,7 @@
                       <ul class="nav navbar-nav main-navbar"></ul> </div>
                       <div class="search-navigation search-sidebar">
                         <div class="search-navigation__wrap">
-                          <ul class="main-menu-search nav-menu">
+                          <!-- <ul class="main-menu-search nav-menu">
                             <li class="menu-search">
                               <a href="https://comicola.com/cart/" class="woo-cart-main-menu">
                                 <i class="ion-ios-cart"></i>
@@ -56,7 +56,7 @@
                                 <i class="ion-android-close"></i>
                               </a>
                             </li>
-                          </ul>
+                          </ul> -->
                         </div>
                       </div>
                       <div class="c-togle__menu">

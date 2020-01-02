@@ -49,8 +49,8 @@
                             <div class="wpb_text_column wpb_content_element ">
                               <div class="wpb_wrapper">
                                 <div class="detail-action">
-                                  <a href="#" class="btn-detail-page" id="btnBorrowBook">Thuê</a>
-                                  <a href="#" class="btn-detail-page" id="btnFeedback">Phản hồi</a>
+                                  <a href="#" class="btn-detail-page" id="btn-borrow-book">Thuê</a>
+                                  <a href="#" class="btn-detail-page" id="btn-feedback">Phản hồi</a>
                                 </div>
                               </div>
                             </div>

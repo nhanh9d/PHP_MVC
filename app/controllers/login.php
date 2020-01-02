@@ -25,11 +25,11 @@ class Login extends Controller {
      * http://localhost/login/log_in
      */
     function Log_In () {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+        $username = $_POST['username'];//ten tai khoan
+        $password = $_POST['password'];//mat khau
 
-        $userModel = $this->model('user');
-        $result = $userModel->getUser($username,$password);
+        $userModel = $this->model('user');//goi 1 cai model user truy van du lieu
+        $result = $userModel->getUser($username,$password);//lay nguoi dung theo ten tai khoan va mat khau
         if(!is_null($result)){
             $_SESSION['client'] = $result;
             header('Location: /');

@@ -35,7 +35,7 @@
                                                               <?php foreach($books as $key => $value){ ?>
                                                                 <li class="post-251363 product type-product status-publish has-post-thumbnail product_cat-cua-hang <?php if($key%4 == 0) {echo 'first';} if($key%4 == 3) {echo 'last';} ?> instock featured shipping-taxable purchasable product-type-simple">
                                                                     <a href="/book/<?php echo $value['isbn_no'] ?>" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
-                                                                      <img width="300" height="300" src="https://comicola.com/wp-content/uploads/2019/11/Board-Game-L%C3%AAn-M%C3%A2m-300x300.png" class="attachment-300x300 size-300x300 wp-post-image" alt="" srcset="https://comicola.com/wp-content/uploads/2019/11/Board-Game-L&ecirc;n-M&acirc;m-300x300.png 300w, https://comicola.com/wp-content/uploads/2019/11/Board-Game-L&ecirc;n-M&acirc;m-200x200.png 200w, https://comicola.com/wp-content/uploads/2019/11/Board-Game-L&ecirc;n-M&acirc;m-768x768.png 768w, https://comicola.com/wp-content/uploads/2019/11/Board-Game-L&ecirc;n-M&acirc;m-700x700.png 700w, https://comicola.com/wp-content/uploads/2019/11/Board-Game-L&ecirc;n-M&acirc;m-100x100.png 100w, https://comicola.com/wp-content/uploads/2019/11/Board-Game-L&ecirc;n-M&acirc;m.png 800w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                      <img width="300" height="300" src="/image/<?php echo $value['subclass_3'] ?>" class="attachment-300x300 size-300x300 wp-post-image" alt="<?php echo $value['title'] ?>">
                                                                         <h2 class="woocommerce-loop-product__title"><?php echo $value['title'] ?></h2>
                                                                         <!-- <span class="price"><span class="woocommerce-Price-amount amount">169,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> -->
                                                                         <!-- </span> -->
@@ -54,7 +54,7 @@
                                                     <div class="wpb_wrapper">
                                                         <div class="wpb_text_column wpb_content_element ">
                                                             <div class="wpb_wrapper">
-                                                                <p style="text-align: left;"><span style="font-size: 40px; padding-top: 20px;">Truy&#7879;n &#273;&#432;&#7907;c gi&#7843;i th&#432;&#7903;ng Qu&#7889;c t&#7871;</span></p>
+                                                                <p style="text-align: left;"><span style="font-size: 40px; padding-top: 20px;">Truyện được giải thưởng Quốc tế</span></p>
                                                             </div>
                                                         </div>
                                                         <div class="vc_row wpb_row vc_inner vc_row-fluid mpc-row">
@@ -63,7 +63,7 @@
                                                                     <div class="wpb_wrapper">
                                                                         <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                             <figure class="wpb_wrapper vc_figure">
-                                                                                <a href="https://comicola.com/longthantuong/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="600" src="https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1.jpg 600w, https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1-200x200.jpg 200w, https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1-300x300.jpg 300w, https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1-100x100.jpg 100w" sizes="(max-width: 600px) 100vw, 600px"></a>
+                                                                                <a href="#" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="600" src="https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1.jpg 600w, https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1-200x200.jpg 200w, https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1-300x300.jpg 300w, https://comicola.com/wp-content/uploads/2019/06/lttpormo1-1-100x100.jpg 100w" sizes="(max-width: 600px) 100vw, 600px"></a>
                                                                             </figure>
                                                                         </div>
                                                                     </div>
@@ -74,7 +74,7 @@
                                                                     <div class="wpb_wrapper">
                                                                         <div class="wpb_single_image wpb_content_element vc_align_left">
                                                                             <figure class="wpb_wrapper vc_figure">
-                                                                                <a href="https://comicola.com/dia-nguc-mon/" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="600" src="https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1.jpg 600w, https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1-200x200.jpg 200w, https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1-300x300.jpg 300w, https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1-100x100.jpg 100w" sizes="(max-width: 600px) 100vw, 600px"></a>
+                                                                                <a href="#" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img width="600" height="600" src="https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1.jpg" class="vc_single_image-img attachment-full" alt="" srcset="https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1.jpg 600w, https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1-200x200.jpg 200w, https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1-300x300.jpg 300w, https://comicola.com/wp-content/uploads/2019/06/lttpormo2-1-100x100.jpg 100w" sizes="(max-width: 600px) 100vw, 600px"></a>
                                                                             </figure>
                                                                         </div>
                                                                     </div>

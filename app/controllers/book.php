@@ -36,6 +36,7 @@ class Book extends Controller {
         $this->view('template/footer');
 
     }
+    
 
 }
 

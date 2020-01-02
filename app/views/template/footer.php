@@ -64,7 +64,7 @@
   </div>
 </div>
 <div class="overlay"></div>
-<div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+<div class="modal fade" id="form-feedback" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -72,22 +72,22 @@
           <span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">
-          <div id="login" class="login">
+          <div id="feedback" class="login">
             <h2>
-              Đăng nhập
+              Phản hồi
             </h2>
             <p class="message login"></p>
-            <form name="loginform" id="loginform" method="post" action="login/log_in">
+            <form name="feedbackform" id="feedbackform" method="post" action="feedback/AddFeedBack">
               <p>
-                <label>Tên tài khoản * <br> <input type="text" name="username" id="username" class="input user_login" value="" size="20">
+                <label>Tiêu đề <br> <input type="text" name="feedback_title" id="feedback_title" class="input user_login" value="" size="20">
                 </label>
               </p>
               <p>
-                <label>Mật khẩu * <br> <input type="password" name="password" id="password" class="input user_pass" value="" size="20">
+                <label>Nội dung * <br> <textarea name="feedback_content" id="feedback_content" class="input user_pass" rows="10" cols="70"></textarea>
                 </label>
               </p>
               <p class="submit">
-                <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Đăng nhập">
+                <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi phản hồi">
               </p>
             </form>
           </div>
@@ -96,6 +96,38 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <div id="login" class="login">
+              <h2>
+                Đăng nhập
+              </h2>
+              <p class="message login"></p>
+              <form name="loginform" id="loginform" method="post" action="login/log_in">
+                <p>
+                  <label>Tên tài khoản * <br> <input type="text" name="username" id="username" class="input user_login" value="" size="20">
+                  </label>
+                </p>
+                <p>
+                  <label>Mật khẩu * <br> <input type="password" name="password" id="password" class="input user_pass" value="" size="20">
+                  </label>
+                </p>
+                <p class="submit">
+                  <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Đăng nhập">
+                </p>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
   <div class="modal fade" id="form-register" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

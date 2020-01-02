@@ -13,7 +13,7 @@ class User extends Model {
               FROM users
               WHERE username = :username AND password = :password';
       $prepare = $this->db->prepare($sql,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-      $prepare->execute($data);
+      $prepare->execute($data); //SELECT username,firstname,lastname FROM users WHERE admin = admin AND password = 1234
       $result = $prepare->fetchAll();
       return $result;
     }

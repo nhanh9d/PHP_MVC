@@ -28,6 +28,17 @@ var app = {
         $('.overlay').addClass('show');
     });
 
+    $('#btn-feedback').on('click', (e)=>{
+        $('#form-feedback').addClass('show');
+        $('.overlay').addClass('show');
+        e.preventDefault();
+    });
+
+    $('#form-feedback .close').on('click',()=>{
+        $('#form-feedback').removeClass('show');
+        $('.overlay').removeClass('show');
+    });
+
     $('#btn_register_form').on('click', ()=>{
         var message = '';
         var reg_password = $('#reg_password').val();
