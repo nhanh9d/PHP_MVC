@@ -3,10 +3,10 @@ var app = {
     app.initFunction();
   },
   initFunction: ()=>{
-    var searchBtn = document.getElementById("search-btn");
-    searchBtn.onclick = (sender,e) => {
-      sender.srcElement.classList.add("search-open");
-    }
+    // var searchBtn = document.getElementById("search-btn");
+    // searchBtn.onclick = (sender,e) => {
+    //   sender.srcElement.classList.add("search-open");
+    // }
 
     $('#form-login .close').on('click',()=>{
         $('#form-login').removeClass('show');
@@ -36,6 +36,18 @@ var app = {
 
     $('#form-feedback .close').on('click',()=>{
         $('#form-feedback').removeClass('show');
+        $('.overlay').removeClass('show');
+    });
+
+    $('a.btn-borrow-book').on('click', (e)=>{
+      debugger
+        $('#form-borrow-book').addClass('show');
+        $('.overlay').addClass('show');
+        e.preventDefault();
+    });
+
+    $('#form-borrow-book .close').on('click',()=>{
+        $('#form-borrow-book').removeClass('show');
         $('.overlay').removeClass('show');
     });
 

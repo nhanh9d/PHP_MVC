@@ -39,7 +39,7 @@
                                                                         <h2 class="woocommerce-loop-product__title"><?php echo $value['title'] ?></h2>
                                                                         <!-- <span class="price"><span class="woocommerce-Price-amount amount">169,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> -->
                                                                         <!-- </span> -->
-                                                                    </a><a href="/?add-to-cart=251363" data-quantity="1" class="button product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="251363" data-product_sku="" aria-label="Th&ecirc;m &ldquo;[Pre-order] Boardgame L&ecirc;n M&acirc;m&rdquo; v&agrave;o gi&#7887; h&agrave;ng" rel="nofollow">Thuê</a>
+                                                                    </a><a href="#" class="button btn-borrow-book" data-book-name="<?php echo $value['title'] ?>" aria-label="" rel="nofollow">Thuê</a>
                                                                 </li>
                                                               <?php }?>
                                                             </ul>

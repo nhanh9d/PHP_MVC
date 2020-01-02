@@ -86,7 +86,7 @@ body .modal .modal-content .modal-body .login label {
     font-weight: 600;
     margin-bottom: 14px;
 }
-body .modal .modal-content .modal-body .login input[type=text], body .modal .modal-content .modal-body .login textarea, body .modal .modal-content .modal-body .login input[type=email], body .modal .modal-content .modal-body .login input[type=url], body .modal .modal-content .modal-body .login input[type=password], body .modal .modal-content .modal-body .login input[type=search] {
+body .modal .modal-content .modal-body .login input[type=text],body .modal .modal-content .modal-body .login input[type=date], body .modal .modal-content .modal-body .login textarea, body .modal .modal-content .modal-body .login input[type=email], body .modal .modal-content .modal-body .login input[type=url], body .modal .modal-content .modal-body .login input[type=password], body .modal .modal-content .modal-body .login input[type=search] {
     width: 100%;
     padding: 13px 15px;
     border: 1px solid #e1e1e1;

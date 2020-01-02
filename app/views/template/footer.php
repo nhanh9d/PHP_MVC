@@ -64,7 +64,7 @@
   </div>
 </div>
 <div class="overlay"></div>
-<div class="modal fade" id="form-feedback" tabindex="-1" role="dialog">
+<div class="modal fade" id="form-borrow-book" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -72,22 +72,22 @@
           <span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">
-          <div id="feedback" class="login">
-            <h2>
-              Phản hồi
+          <div id="borrow-book" class="login">
+            <h2 id="borrow-book-title">
+              Thuê sách
             </h2>
             <p class="message login"></p>
-            <form name="feedbackform" id="feedbackform" method="post" action="feedback/AddFeedBack">
+            <form name="borrow-bookform" id="borrow-bookform" method="post" action="borrowBook/BorrowNewBook">
               <p>
-                <label>Tiêu đề <br> <input type="text" name="feedback_title" id="feedback_title" class="input user_login" value="" size="20">
+                <label>Ngày bắt đầu <br> <input type="date" name="borrow-book_title" id="borrow-book_title" class="input user_login" value="" size="20">
                 </label>
               </p>
               <p>
-                <label>Nội dung * <br> <textarea name="feedback_content" id="feedback_content" class="input user_pass" rows="10" cols="70"></textarea>
+                <label>Ngày trả sách <br> <input type="date" name="borrow-book_title" id="borrow-book_title" class="input user_login" value="" size="20">
                 </label>
               </p>
               <p class="submit">
-                <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi phản hồi">
+                <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
               </p>
             </form>
           </div>
@@ -96,6 +96,38 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="form-feedback" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <div id="feedback" class="login">
+              <h2>
+                Phản hồi
+              </h2>
+              <p class="message login"></p>
+              <form name="feedbackform" id="feedbackform" method="post" action="feedback/AddFeedBack">
+                <p>
+                  <label>Tiêu đề <br> <input type="text" name="feedback_title" id="feedback_title" class="input user_login" value="" size="20">
+                  </label>
+                </p>
+                <p>
+                  <label>Nội dung * <br> <textarea name="feedback_content" id="feedback_content" class="input user_pass" rows="10" cols="70"></textarea>
+                  </label>
+                </p>
+                <p class="submit">
+                  <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi phản hồi">
+                </p>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
   <div class="modal fade" id="form-login" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
