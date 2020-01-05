@@ -30,10 +30,10 @@ class Login extends Controller {
 
         $userModel = $this->model('user');//goi 1 cai model user truy van du lieu
         $result = $userModel->getUser($username,$password);//lay nguoi dung theo ten tai khoan va mat khau
-        if(!is_null($result)){
+        if(!empty($result)){
             $_SESSION['client'] = $result;
-            header('Location: /');
         }
+        print !empty($result);
     }
 
     function register(){

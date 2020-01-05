@@ -79,7 +79,7 @@ var app = {
       return false;
     });
 
-    $('#btn-borrow-book').on('click',()=>{
+    $('#btn-borrow-book-form').on('click',()=>{
       var message = '';
 
       var startDate = $('#borrow-book_start-date').val();
@@ -95,8 +95,34 @@ var app = {
         data:obj,
         type:'POST'
       }).done((data)=>{
-        debugger
         $('.message.borrow-book').html(data);
+      }).fail((message)=>{
+        $('.message.borrow-book').html('Có lỗi xảy ra');
+      });
+
+      return false;
+    });
+
+    $('#btn-login-form').on('click',()=>{
+      var message = '';
+
+      var username = $('#username').val();
+      var password = $('#password').val();
+      var obj = {
+        username:username,
+        password:password
+      };
+      $.ajax({
+        url:'Login/Log_In',
+        data:obj,
+        type:'POST'
+      }).done((result)=>{
+        if (result === "1") {
+          location.reload();
+        }
+        else{
+          $('.message.login').html('Tài khoản không tồn tại');
+        }
       }).fail((message)=>{
         $('.message.borrow-book').html('Có lỗi xảy ra');
       });

@@ -76,7 +76,7 @@
             <h2 id="borrow-book-title">
               Thuê sách
             </h2>
-            <form name="borrow-bookform" id="borrow-bookform" method="post" action="borrowBook/BorrowNewBook">
+            <form name="borrow-bookform" id="borrow-bookform">
               <p>
                 <label>Ngày bắt đầu <br> <input type="date" name="borrow-book_start-date" id="borrow-book_start-date" class="input user_login" value="" size="20">
                 </label>
@@ -85,10 +85,10 @@
                 <label>Ngày trả sách <br> <input type="date" name="borrow-book_end-date" id="borrow-book_end-date" class="input user_login" value="" size="20">
                 </label>
               </p>
-              <p class="message login borrow-book"></p>
+              <p class="message borrow-book"></p>
               <input type="hidden" id="borrow-book_book-id"/>
               <p class="submit">
-                <input type="submit" id="btn-borrow-book" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
+                <input type="submit" id="btn-borrow-book-form" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
               </p>
             </form>
           </div>
@@ -109,8 +109,7 @@
               <h2>
                 Phản hồi
               </h2>
-              <p class="message login"></p>
-              <form name="feedbackform" id="feedbackform" method="post" action="feedback/AddFeedBack">
+              <form name="feedbackform" id="feedbackform">
                 <p>
                   <label>Tiêu đề <br> <input type="text" name="feedback_title" id="feedback_title" class="input user_login" value="" size="20">
                   </label>
@@ -119,8 +118,9 @@
                   <label>Nội dung * <br> <textarea name="feedback_content" id="feedback_content" class="input user_pass" rows="10" cols="70"></textarea>
                   </label>
                 </p>
+                <p class="message feedback"></p>
                 <p class="submit">
-                  <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi phản hồi">
+                  <input type="submit" name="wp-submit" id="btn-feedback-form" class="button button-primary button-large wp-submit" value="Gửi phản hồi">
                 </p>
               </form>
             </div>
@@ -141,8 +141,7 @@
               <h2>
                 Đăng nhập
               </h2>
-              <p class="message login"></p>
-              <form name="loginform" id="loginform" method="post" action="login/log_in">
+              <form name="loginform" id="loginform">
                 <p>
                   <label>Tên tài khoản * <br> <input type="text" name="username" id="username" class="input user_login" value="" size="20">
                   </label>
@@ -151,8 +150,9 @@
                   <label>Mật khẩu * <br> <input type="password" name="password" id="password" class="input user_pass" value="" size="20">
                   </label>
                 </p>
+                <p class="message login"></p>
                 <p class="submit">
-                  <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Đăng nhập">
+                  <input type="submit" name="wp-submit" id="btn-login-form" class="button button-primary button-large wp-submit" value="Đăng nhập">
                 </p>
               </form>
             </div>
@@ -173,7 +173,7 @@
               <h2>
                 Đăng ký
               </h2>
-              <form name="registerform" id="registerform" method="post" action="login/register">
+              <form name="registerform" id="registerform">
                 <p>
                   <label>Tên tài khoản * <br> <input type="text" name="username" id="reg_username" class="input user_name" value="" size="20">
                   </label>
@@ -186,11 +186,11 @@
                   <label>Nhắc lại mật khẩu * <br> <input type="password" name="password_confirm" id="reg_password_confirm" class="input user_pass" value="" size="20">
                   </label>
                 </p>
+                <p class="message register"></p>
                 <p class="submit">
                   <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" id="btn_register_form" value="Đăng ký">
                 </p>
               </form>
-              <p class="message register"></p>
             </div>
           </div>
           <div class="modal-footer"></div>
