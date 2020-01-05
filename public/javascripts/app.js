@@ -8,10 +8,10 @@ var app = {
     //   sender.srcElement.classList.add("search-open");
     // }
 
-        $('#form-login .close').on('click',()=>{
-          $('#form-login').removeClass('show');
-          $('.overlay').removeClass('show');
-        });
+    $('#form-login .close').on('click',()=>{
+      $('#form-login').removeClass('show');
+      $('.overlay').removeClass('show');
+    });
 
     $('#btn-login').on('click', ()=>{
       $('#form-login').addClass('show');
@@ -125,6 +125,32 @@ var app = {
         }
       }).fail((message)=>{
         $('.message.borrow-book').html('Có lỗi xảy ra');
+      });
+
+      return false;
+    });
+
+    $('#btn-feedback-form').on('click',()=>{
+      var message = '';
+
+      var title = $('#feedback_title').val();
+      var content = $('#feedback_content').val();
+      var bookId = $('#feedback_book-id').val();
+
+      var obj = {
+        title:title,
+        content:content,
+        bookId:bookId
+      };
+      $.ajax({
+        url:`${window.location.origin}/FeedBack/AddFeedBack`,
+        data:obj,
+        type:'POST'
+      }).done((result)=>{
+        debugger
+        $('.message.feedback').html(result);
+      }).fail((message)=>{
+        $('.message.feedback').html('Có lỗi xảy ra');
       });
 
       return false;

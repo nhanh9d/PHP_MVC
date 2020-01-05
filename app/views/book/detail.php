@@ -69,3 +69,4 @@
   </div>
 
 </div>
+<input type="hidden" id="feedback_book-id" value="<?php echo $bookDetail['book_id'] ?>"/>

@@ -2,7 +2,7 @@
 
 class BorrowBook extends Controller {
 
-  function Index(){}
+    function Index(){}
 
     function BorrowNewBook()
     {
