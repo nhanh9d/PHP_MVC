@@ -39,7 +39,7 @@
                                                                         <h2 class="woocommerce-loop-product__title"><?php echo $value['title'] ?></h2>
                                                                         <!-- <span class="price"><span class="woocommerce-Price-amount amount">169,000<span class="woocommerce-Price-currencySymbol">&#8363;</span></span> -->
                                                                         <!-- </span> -->
-                                                                    </a><a href="#" class="button btn-borrow-book" data-book-name="<?php echo $value['title'] ?>" aria-label="" rel="nofollow">Thuê</a>
+                                                                    </a><a href="#" class="button btn-borrow-book" data-book-name="<?php echo $value['title'] ?>" data-book-id="<?php echo $value['book_id'] ?>" aria-label="" rel="nofollow">Thuê</a>
                                                                 </li>
                                                               <?php }?>
                                                             </ul>

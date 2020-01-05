@@ -76,18 +76,19 @@
             <h2 id="borrow-book-title">
               Thuê sách
             </h2>
-            <p class="message login"></p>
             <form name="borrow-bookform" id="borrow-bookform" method="post" action="borrowBook/BorrowNewBook">
               <p>
-                <label>Ngày bắt đầu <br> <input type="date" name="borrow-book_title" id="borrow-book_title" class="input user_login" value="" size="20">
+                <label>Ngày bắt đầu <br> <input type="date" name="borrow-book_start-date" id="borrow-book_start-date" class="input user_login" value="" size="20">
                 </label>
               </p>
               <p>
-                <label>Ngày trả sách <br> <input type="date" name="borrow-book_title" id="borrow-book_title" class="input user_login" value="" size="20">
+                <label>Ngày trả sách <br> <input type="date" name="borrow-book_end-date" id="borrow-book_end-date" class="input user_login" value="" size="20">
                 </label>
               </p>
+              <p class="message login borrow-book"></p>
+              <input type="hidden" id="borrow-book_book-id"/>
               <p class="submit">
-                <input type="submit" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
+                <input type="submit" id="btn-borrow-book" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
               </p>
             </form>
           </div>

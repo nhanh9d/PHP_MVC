@@ -96,7 +96,7 @@
                     </ul>
                   </div>
                   <div class="c-modal_item">
-                    <?php if (isset($_SESSION['login'])) { ?>
+                    <?php if (isset($_SESSION['client'])) { ?>
                     <a class="btn-active-modal" href="/login/logout">Đăng xuất</a>
                     <?php } else { ?>
                       <a class="btn-active-modal" id='btn-login'>Đăng nhập</a>
