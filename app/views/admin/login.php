@@ -15,7 +15,7 @@
 <body>
 <script src='//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'></script><script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
 <div class="form">
-<h1>NhaAn Login</h1>
+<h1>Comicola Management</h1>
 	<div class="form-content">
 		<form action="/admin/DoLogin" method="post">
 			<div class="form-info">
