@@ -2,7 +2,22 @@
 
 class BorrowBook extends Controller {
 
-    function Index(){}
+    function Index(){
+      if (isset($_SESSION['client'])) {
+        $borrowBookModel = $this->model('BorrowBookModel');
+        $userId = $_SESSION['client']['user_id'];
+                $viewData = array(
+                    'listBorrow' => $borrowBookModel->getBorrowBookList($userId)
+                );
+
+        $this->view('template/header');
+        $this->view('borrowbook/list', $viewData);
+        $this->view('template/footer');
+      }
+      else{
+        header('Location: /');
+      }
+    }
 
     function BorrowNewBook()
     {
@@ -46,6 +61,35 @@ class BorrowBook extends Controller {
         //   $borrowBookModel->borrowNewBook($startDate, $endDate, $bookId, $userId);
         // }
       }
+      print_r($message);
+    }
+
+    function ExtendBorrowBook()
+    {
+      $message = '';
+      if (isset($_POST['endDate'])) {
+        $endDate = $_POST['endDate'];
+      }
+      if (isset($_POST['bookId'])) {
+        $bookId = $_POST['bookId'];
+      }
+      $message = '';
+      if (!isset($_SESSION['client'])) {
+        $message = 'Cần đăng nhập để gia hạn';
+      }
+      else if(!is_null($endDate) && !is_null($bookId) && !is_null($_SESSION['client']))
+      {
+        $borrowBookModel = $this->model('BorrowBookModel');
+        $userId = $_SESSION['client']['user_id'];
+
+          $isSuccess = $borrowBookModel->ExtendBorrowBook($endDate, $bookId, $userId);
+          if ($isSuccess) {
+            $message = 'Gia hạn thành công';
+          }
+          else{
+            $message = 'Gia hạn không thành công';
+          }
+        }
       print_r($message);
     }
 

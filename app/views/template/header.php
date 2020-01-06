@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="/public/stylesheets/ion.css">
   <link rel="stylesheet" href="/public/stylesheets/footer.css">
   <link rel="stylesheet" href="/public/stylesheets/header.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
   <div class="wrap">
@@ -45,65 +46,69 @@
                       <div class="search-navigation search-sidebar">
                         <div class="search-navigation__wrap">
                           <!-- <ul class="main-menu-search nav-menu">
-                            <li class="menu-search">
-                              <a href="https://comicola.com/cart/" class="woo-cart-main-menu">
-                                <i class="ion-ios-cart"></i>
-                              </a>
-                            </li>
-                            <li class="menu-search">
-                              <a id="search-btn" class="open-search-main-menu">
-                                <i class="ion-ios-search-strong"></i>
-                                <i class="ion-android-close"></i>
-                              </a>
-                            </li>
-                          </ul> -->
-                        </div>
-                      </div>
-                      <div class="c-togle__menu">
-                        <button type="button" class="menu_icon__open">
-                          <span></span> <span></span> <span></span>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                          <li class="menu-search">
+                          <a href="https://comicola.com/cart/" class="woo-cart-main-menu">
+                          <i class="ion-ios-cart"></i>
+                        </a>
+                      </li>
+                      <li class="menu-search">
+                      <a id="search-btn" class="open-search-main-menu">
+                      <i class="ion-ios-search-strong"></i>
+                      <i class="ion-android-close"></i>
+                    </a>
+                  </li>
+                </ul> -->
               </div>
             </div>
-          </div>
-          <div class="mobile-menu menu-collapse off-canvas">
-            <div class="close-nav">
-              <button class="menu_icon__close">
-                <span></span> <span></span>
+            <div class="c-togle__menu">
+              <button type="button" class="menu_icon__open">
+                <span></span> <span></span> <span></span>
               </button>
             </div>
-            <div class="c-modal_item">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mobile-menu menu-collapse off-canvas">
+  <div class="close-nav">
+    <button class="menu_icon__close">
+      <span></span> <span></span>
+    </button>
+  </div>
+  <div class="c-modal_item">
 
-              <span class="c-modal_sign-in">
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Đăng nhập</a>
-              </span>
-              <span class="c-modal_sign-up">
-                <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng ký</a>
-              </span>
-            </div>
-            <nav class="off-menu">
-              <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar"></ul> </nav>
-            </div>
-            <div class="no-subnav c-sub-header-nav with-border  ">
-              <div class="container ">
-                <div class="c-sub-nav_wrap">
-                  <div class="sub-nav_content">
-                    <ul class="sub-nav_list list-inline second-menu">
-                    </ul>
-                  </div>
-                  <div class="c-modal_item">
-                    <?php if (isset($_SESSION['client'])) { ?>
-                    <a class="btn-active-modal" href="/login/logout">Đăng xuất</a>
-                    <?php } else { ?>
-                      <a class="btn-active-modal" id='btn-login'>Đăng nhập</a>
-                      <a class="btn-active-modal" id='btn-register'>Đăng ký</a>
-                    <?php } ?>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </header>
+    <span class="c-modal_sign-in">
+      <a href="javascript:void(0)" data-toggle="modal" data-target="#form-login" class="btn-active-modal">Đăng nhập</a>
+    </span>
+    <span class="c-modal_sign-up">
+      <a href="javascript:void(0)" data-toggle="modal" data-target="#form-sign-up" class="btn-active-modal">Đăng ký</a>
+    </span>
+  </div>
+  <nav class="off-menu">
+    <ul id="menu-main-menu-1" class="nav navbar-nav main-navbar"></ul> </nav>
+  </div>
+  <div class="no-subnav c-sub-header-nav with-border  ">
+    <div class="container ">
+      <div class="c-sub-nav_wrap">
+        <div class="sub-nav_content">
+          <ul class="sub-nav_list list-inline second-menu">
+            <?php if (isset($_SESSION['client'])) { ?>
+              <li class="sub-nav_list-item"><a href="/BorrowBook/">Xem các sách đã đăng ký thuê</a></li>
+              <li class="sub-nav_list-item"><a href="#">Yêu cầu thêm đầu sách</a></li>
+            <?php } ?>
+          </ul>
+        </div>
+        <div class="c-modal_item">
+          <?php if (isset($_SESSION['client'])) { ?>
+            <a class="btn-active-modal" href="/login/logout">Đăng xuất</a>
+          <?php } else { ?>
+            <a class="btn-active-modal" id='btn-login'>Đăng nhập</a>
+            <a class="btn-active-modal" id='btn-register'>Đăng ký</a>
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

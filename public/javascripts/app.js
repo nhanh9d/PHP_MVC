@@ -52,6 +52,19 @@ var app = {
       $('.overlay').removeClass('show');
     });
 
+    $('a.extend-borrow-book').on('click', (e)=>{
+      var bookId = $(e.currentTarget).attr('data-book-id');
+      $('#extend_borrow-book_book-id').val(bookId);
+      $('#form-extend-borrow-book').addClass('show');
+      $('.overlay').addClass('show');
+      e.preventDefault();
+    });
+
+    $('#form-extend-borrow-book .close').on('click',()=>{
+      $('#form-extend-borrow-book').removeClass('show');
+      $('.overlay').removeClass('show');
+    });
+
     $('#btn_register_form').on('click', ()=>{
       var message = '';
       var reg_password = $('#reg_password').val();
@@ -85,6 +98,7 @@ var app = {
       var startDate = $('#borrow-book_start-date').val();
       var endDate = $('#borrow-book_end-date').val();
       var bookId = $('#borrow-book_book-id').val();
+      endDate = new Date(endDate);
       var obj = {
         startDate:startDate,
         endDate:endDate,
@@ -99,6 +113,35 @@ var app = {
       }).fail((message)=>{
         $('.message.borrow-book').html('Có lỗi xảy ra');
       });
+
+      return false;
+    });
+
+    $('#btn-extend-borrow-book-form').on('click',()=>{
+      var message = '';
+
+      var endDate = $('#extend-borrow-book_end-date').val();
+      var bookId = $('#extend-borrow-book_book-id').val();
+      endDate = new Date(endDate);
+
+      if (endDate > Date.now()) {
+        var obj = {
+          endDate:endDate,
+          bookId:bookId
+        };
+        $.ajax({
+          url:'/BorrowBook/ExtendBorrowBook',
+          data:obj,
+          type:'POST'
+        }).done((data)=>{
+          $('.message.extend-borrow-book').html(data);
+        }).fail((message)=>{
+          $('.message.extend-borrow-book').html('Có lỗi xảy ra');
+        });
+      }
+      else{
+          $('.message.extend-borrow-book').html('Ngày hết hạn phải lớn hơn ngày hiện tại');
+      }
 
       return false;
     });

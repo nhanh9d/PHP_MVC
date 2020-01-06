@@ -1,0 +1,111 @@
+.c-page-content .page-content-listing {
+    margin-top: 35px;
+}
+.c-page-content .page-content-listing .listing-chapters_wrap.show-more .version-chap {
+    max-height: 550px;
+    display: block;
+    overflow: hidden;
+    word-break: break-word;
+    word-wrap: break-word;
+    line-height: 30px;
+    position: relative;
+    padding-left: 0;
+    margin-top: -15px;
+    margin-bottom: 20px;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul li, .shortcode-manga-chapters .listing-chapters_wrap > ul li {
+    list-style: none;
+    position: relative;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul.version-chap > li > .chapter-thumb {
+    display: inline-block;
+    max-width: 40%;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul.version-chap > li > .chapter-thumb + .chapter-title {
+    margin-left: 20px;
+    display: inline-block;
+    position: absolute;
+    left: 40%;
+    top: 25%;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul li > .chapter-thumb + .chapter-title a, .c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul li > .chapter-thumb a {
+    padding: 0px;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul li > .chapter-thumb + .chapter-title a{
+  font-weight: 600;
+    display: block;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #999;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul li > .chapter-thumb + .chapter-title .chapter-extend-name{
+  font-weight: 600;
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul li > .chapter-thumb + .chapter-title a:hover{
+    color: #333;
+    text-decoration: none;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul.main.version-chap li .chapter-release-date{
+    color: #40845e;
+    position: unset;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul.main.version-chap li .chapter-meta {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate( 0, -50% );
+}
+.c-page-content .chapter-sell-type {
+    padding: 4px 6px;
+    line-height: 1.2em;
+    border-radius: 4px;
+    color: #fff;
+    background: #41855e;
+    margin: 0px 10px;
+    display: inline-block;
+    min-width: 36px;
+}
+.c-page-content .chapter-sell-type:hover {
+    background: #175431;
+}
+.c-page-content .chapter-sell-type *{
+    color: #fff;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul.main.version-chap li:after, .shortcode-manga-chapters .listing-chapters_wrap > ul.main.version-chap li:after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 1px;
+    background-color: #ebebeb;
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+.fa-coins {
+    margin-right: 3px;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul li > .chapter-thumb a{
+  overflow: hidden;
+  display:block;
+  max-height: 200px;
+}
+.c-page-content .entry-header .entry-title {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 0;
+    margin: 30px 0 15px;
+}
+.item-title{
+      margin-top: 0;
+    color: #333;
+}
+.c-page-content .page-content-listing.single-page .listing-chapters_wrap > ul.main.version-chap li .chapter-release-date.delimeter{padding: 0 10px;color:#333}
