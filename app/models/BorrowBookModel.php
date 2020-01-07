@@ -53,7 +53,7 @@ class BorrowBookModel extends Model {
   function ExtendBorrowBook($endDate, $bookId, $userId){
       $result = true;
       $sqlEndDate = date('Y-m-d', strtotime($endDate));
-      $data = array(':book_id' => $bookId, ':user_id' => $userId, ':expire_renting_date' => date('Y-m-d', strtotime("2020-12-24")));
+      $data = array(':book_id' => $bookId, ':user_id' => $userId, ':expire_renting_date' => $sqlEndDate);
       $sql = 'UPDATE book_renting br
       SET br.expire_renting_date = :expire_renting_date, br.is_expired = 0 WHERE br.book_id = :book_id AND br.user_id = :user_id';
       $prepare = $this->db->prepare($sql);

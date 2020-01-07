@@ -109,7 +109,6 @@ var app = {
             var startDate = $('#borrow-book_start-date').val();
             var endDate = $('#borrow-book_end-date').val();
             var bookId = $('#borrow-book_book-id').val();
-            endDate = new Date(endDate);
             var obj = {
                 startDate: startDate,
                 endDate: endDate,
@@ -133,9 +132,9 @@ var app = {
 
             var endDate = $('#extend-borrow-book_end-date').val();
             var bookId = $('#extend-borrow-book_book-id').val();
-            endDate = new Date(endDate);
+            var checkDate = new Date(endDate);
 
-            if (endDate > Date.now()) {
+            if (checkDate > Date.now()) {
                 var obj = {
                     endDate: endDate,
                     bookId: bookId
