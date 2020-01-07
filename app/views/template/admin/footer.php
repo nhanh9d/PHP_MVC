@@ -6,8 +6,6 @@
 </div>
 <!-- ./wrapper -->
 
-<!-- jQuery 3 -->
-<script src="/public/admin/javascripts/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="/public/admin/javascripts/bootstrap.min.js"></script>
 <!-- FastClick -->
@@ -23,8 +21,6 @@
 <script src="/public/admin/javascripts/jquery.slimscroll.min.js"></script>
 <!-- ChartJS -->
 <script src="/public/admin/javascripts/Chart.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="/public/admin/javascripts/dashboard2.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="/public/admin/javascripts/demo.js"></script>
 </body>
