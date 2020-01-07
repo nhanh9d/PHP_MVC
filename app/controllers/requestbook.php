@@ -36,9 +36,7 @@ class RequestBook extends Controller {
         $requestBookModel = $this->model('RequestBookModel');
         $userId = $_SESSION['client']['user_id'];
 
-        $bookCount = $requestBookModel->CreateRequestBook($bookTitle, $userNote, $userId);
-
-          $isSuccess = $requestBookModel->CreateRequestBook($bookTitle, $userNote, $userId);
+        $isSuccess = $requestBookModel->CreateRequestBook($bookTitle, $userNote, $userId);
           if ($isSuccess) {
             $message = 'Yêu cầu thêm đầu sách thành công';
           }
