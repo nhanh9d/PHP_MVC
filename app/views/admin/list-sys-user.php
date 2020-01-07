@@ -17,9 +17,6 @@
         <div class="row">
             <div class="col-xs-12">
                 <div class="box box-default">
-                    <div class="box-header with-border">
-                        <h3 class="box-title">Modal Examples</h3>
-                    </div>
                     <div class="box-body">
                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-add">
                             <i class="fa fa-plus" style="padding-right:5px"></i>Thêm
@@ -45,10 +42,10 @@
                             <tbody>
                                 <tr>
                                     <th>ID</th>
-                                    <th>User</th>
-                                    <th>Fullname</th>
-                                    <th>Date</th>
-                                    <th>Status</th>
+                                    <th>Tên đăng nhập</th>
+                                    <th>Họ và tên</th>
+                                    <th>Ngày tạo tài khoản</th>
+                                    <th>Trạng thái</th>
                                 </tr>
                                 <?php foreach($listSysUser as $key => $value){ ?>
                                     <tr>

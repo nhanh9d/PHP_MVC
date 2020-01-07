@@ -29,13 +29,13 @@ class Admin extends Controller {
         $password = $_POST['password'];
 
         $result = $this->model('AdminModel')->getAdmin($username,$password);
-        if(!is_null($result)){
+        if(!empty($result)){
             $_SESSION['admin'] = $result;
             header('Location: /admin');
         }
         else{
             $viewData = array(
-                'noUserFound' => 'noUserFound'
+                'noUserFound' => 'Không có người dùng '.$username
             );
             $this->view('admin/login', $viewData);
         }
