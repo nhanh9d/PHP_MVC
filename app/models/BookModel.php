@@ -8,7 +8,7 @@
 class BookModel extends Model {
   function getAllBooks(){
     $sql = 'SELECT * FROM book';
-    $prepare = $this->db->prepare($sql,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
+    $prepare = $this->db->prepare($sql);
     $prepare->execute();
     $result = $prepare->fetchAll();
     return $result;

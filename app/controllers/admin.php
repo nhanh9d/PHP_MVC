@@ -102,6 +102,15 @@ class Admin extends Controller {
         $this->view('template/admin/footer');
     }
 
+    function listBook(){
+
+        $BookModel = $this->model('BookModel');
+
+        $this->view('template/admin/header', array('username' => $_SESSION['admin']['username']));
+        $this->view('admin/list-book', array('listBook' => $BookModel->getAllBooks()));
+        $this->view('template/admin/footer');
+    }
+
 
 }
 

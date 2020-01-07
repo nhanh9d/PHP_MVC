@@ -132,7 +132,7 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Thể loại sách</a></li>
-                            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Đầu sách</a></li>
+                            <li><a href="/admin/listBook"><i class="fa fa-circle-o"></i> Đầu sách</a></li>
                         </ul>
                     </li>
                     <li class="treeview">
