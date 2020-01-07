@@ -37,7 +37,7 @@ class RequestBookModel extends Model {
     private function addNewBook($title){
         $data = array(':book_title' => $title);
         $sql = 'INSERT INTO book(copies, copyright_year, date_received, title, author, publisher_name, place_publication, isbn_no, category_id, availability, subject, cover_image, subclass_3, subclass_4, description, status, call_number, section)
-        VALUES ('',0,'',:book_title,'','','','',0,'','','','default-book-cover.png','','','','','')';
+        VALUES ("",0,"",:book_title,"","","","",0,"","","","default-book-cover.png","","","","","")';
         $prepare = $this->db->prepare($sql);
         $result = $prepare->execute($data);
     }
