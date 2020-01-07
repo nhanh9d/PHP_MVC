@@ -7,13 +7,13 @@
  */
 class AdminModel extends Model {
     function getAdmin($username, $password){
-      $result = null;
+      $data = array(':username' => $username, ':password' => md5($password));
       $sql = 'SELECT username
               FROM admin
               WHERE username = :username AND password = :password';
-      $prepare = $this->db->prepare($sql,array(PDO::ATTR_CURSOR => PDO::CURSOR_FWDONLY));
-      $prepare->execute(array(':username' => $username, ':password' => md5($password)));
-      $result = $prepare->fetchAll();
+      $prepare = $this->db->prepare($sql);
+      $prepare->execute($data);
+      $result = $prepare->fetch();
       return $result;
     }
 }

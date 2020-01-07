@@ -12,8 +12,7 @@ class Admin extends Controller {
       header('Location: /admin/login');
 
     } else {
-
-      $this->view('template/admin/header');
+      $this->view('template/admin/header', array('username' => $_SESSION['admin']['username']));
       $this->view('admin/index');
       $this->view('template/admin/footer');
 
@@ -29,40 +28,23 @@ class Admin extends Controller {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $result = $this->model('admin')->getAdmin($username,$password);
-    print_r($result);
-    // if(!is_null($result)){
-    //   print_r($result);
-    //   $_SESSION['admin'] = $result;
-    //   header('Location: /admin');
-    // }
-    // else{
-    //   $viewData = array(
-    //     'noUserFound' => 'noUserFound'
-    // );
-    //   $this->view('admin/login', $viewData);
-    // }
-  }
-
-  /*
-  * http://localhost/dashboard/subpage/[$parameter]
-  */
-  function subpage ($parameter = '') {
-
-    $viewData = array(
-      'parameter' => $parameter
+    $result = $this->model('AdminModel')->getAdmin($username,$password);
+    if(!is_null($result)){
+      $_SESSION['admin'] = $result;
+      header('Location: /admin');
+    }
+    else{
+      $viewData = array(
+        'noUserFound' => 'noUserFound'
     );
-
-    $this->view('template/admin/header');
-    $this->view('admin/subpage', $viewData);
-    $this->view('template/admin/footer');
-
+      $this->view('admin/login', $viewData);
+    }
   }
- function Logout () {
+ function doLogout () {
 
      $_SESSION['admin'] = null;
      //session_unset();
-     header('Location: /');
+     header('Location: /admin/login');
 
  }
 

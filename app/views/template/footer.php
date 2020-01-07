@@ -64,7 +64,7 @@
   </div>
 </div>
 <div class="overlay"></div>
-<div class="modal fade" id="form-extend-borrow-book" tabindex="-1" role="dialog">
+<div class="modal fade" id="form-request-more-book" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -72,19 +72,22 @@
           <span aria-hidden="true">×</span></button>
         </div>
         <div class="modal-body">
-          <div id="extend-borrow-book" class="login">
-            <h2 id="extend-borrow-book-title">
-              Gia hạn
+          <div id="request-more-book" class="login">
+            <h2 id="request-more-book-title">
+              Yêu cầu thêm đầu sách
             </h2>
-            <form name="extend-borrow-bookform" id="extend-borrow-bookform">
+            <form name="request-more-bookform" id="request-more-bookform">
               <p>
-                <label>Ngày trả sách <br> <input type="date" name="extend-borrow-book_end-date" id="extend-borrow-book_end-date" class="input user_login" value="" size="20">
+                <label>Tên sách <br> <input type="text" name="request-more-book_title" id="request-more-book_title" class="input user_login" value="" size="20">
                 </label>
               </p>
-              <p class="message extend-borrow-book"></p>
-              <input type="hidden" id="extend-borrow-book_book-id"/>
+                <p>
+                  <label>Ghi chú<br> <textarea name="request-more-book_user-note" id="request-more-book_user-note" class="input user_pass" rows="10" cols="70"></textarea>
+                  </label>
+                </p>
+              <p class="message request-more-book"></p>
               <p class="submit">
-                <input type="submit" id="btn-extend-borrow-book-form" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
+                <input type="submit" id="btn-request-more-book-form" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
               </p>
             </form>
           </div>
@@ -93,6 +96,35 @@
       </div>
     </div>
   </div>
+  <div class="modal fade" id="form-extend-borrow-book" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <div id="extend-borrow-book" class="login">
+              <h2 id="extend-borrow-book-title">
+                Gia hạn
+              </h2>
+              <form name="extend-borrow-bookform" id="extend-borrow-bookform">
+                <p>
+                  <label>Ngày trả sách <br> <input type="date" name="extend-borrow-book_end-date" id="extend-borrow-book_end-date" class="input user_login" value="" size="20">
+                  </label>
+                </p>
+                <p class="message extend-borrow-book"></p>
+                <input type="hidden" id="extend-borrow-book_book-id"/>
+                <p class="submit">
+                  <input type="submit" id="btn-extend-borrow-book-form" name="wp-submit" class="button button-primary button-large wp-submit" value="Gửi yêu cầu">
+                </p>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
   <div class="modal fade" id="form-borrow-book" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">

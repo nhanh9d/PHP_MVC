@@ -39,7 +39,7 @@ var app = {
       $('.overlay').removeClass('show');
     });
 
-    $('a.btn-borrow-book').on('click', (e)=>{
+    $('a.btn-borrow-book, a#btn-borrow-book').on('click', (e)=>{
       var bookId = $(e.currentTarget).attr('data-book-id');
       $('#borrow-book_book-id').val(bookId);
       $('#form-borrow-book').addClass('show');
@@ -62,6 +62,17 @@ var app = {
 
     $('#form-extend-borrow-book .close').on('click',()=>{
       $('#form-extend-borrow-book').removeClass('show');
+      $('.overlay').removeClass('show');
+    });
+
+    $('a#btn-request-more-book').on('click', (e)=>{
+      $('#form-request-more-book').addClass('show');
+      $('.overlay').addClass('show');
+      e.preventDefault();
+    });
+
+    $('#form-request-more-book .close').on('click',()=>{
+      $('#form-request-more-book').removeClass('show');
       $('.overlay').removeClass('show');
     });
 
@@ -190,10 +201,32 @@ var app = {
         data:obj,
         type:'POST'
       }).done((result)=>{
-        debugger
         $('.message.feedback').html(result);
       }).fail((message)=>{
         $('.message.feedback').html('Có lỗi xảy ra');
+      });
+
+      return false;
+    });
+
+    $('#btn-request-more-book-form').on('click',()=>{
+      var message = '';
+
+      var book_title = $('#request-more-book_title').val();
+      var user_note = $('#request-more-book_user-note').val();
+
+      var obj = {
+        book_title:book_title,
+        user_note:user_note
+      };
+      $.ajax({
+        url:`${window.location.origin}/RequestBook/RequestNewBook`,
+        data:obj,
+        type:'POST'
+      }).done((result)=>{
+        $('.message.request-more-book').html(result);
+      }).fail((message)=>{
+        $('.message.request-more-book').html('Có lỗi xảy ra');
       });
 
       return false;

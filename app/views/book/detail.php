@@ -49,7 +49,7 @@
                             <div class="wpb_text_column wpb_content_element ">
                               <div class="wpb_wrapper">
                                 <div class="detail-action">
-                                  <a href="#" class="btn-detail-page" id="btn-borrow-book">Thuê</a>
+                                  <a href="#" class="btn-detail-page" id="btn-borrow-book" data-book-id="<?php echo $bookDetail['book_id'] ?>">Thuê</a>
                                   <a href="#" class="btn-detail-page" id="btn-feedback">Phản hồi</a>
                                 </div>
                               </div>

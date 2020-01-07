@@ -96,7 +96,7 @@
           <ul class="sub-nav_list list-inline second-menu">
             <?php if (isset($_SESSION['client'])) { ?>
               <li class="sub-nav_list-item"><a href="/BorrowBook/">Xem các sách đã đăng ký thuê</a></li>
-              <li class="sub-nav_list-item"><a href="#">Yêu cầu thêm đầu sách</a></li>
+              <li class="sub-nav_list-item"><a href="#" id="btn-request-more-book">Yêu cầu thêm đầu sách</a></li>
             <?php } ?>
           </ul>
         </div>
