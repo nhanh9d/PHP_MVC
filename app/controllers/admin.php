@@ -92,6 +92,17 @@ class Admin extends Controller {
         $this->view('admin/list-user', array('listUser' => $userModel->getAllUser()));
         $this->view('template/admin/footer');
     }
+
+    function listBookRequest(){
+
+        $RequestBookModel = $this->model('RequestBookModel');
+
+        $this->view('template/admin/header', array('username' => $_SESSION['admin']['username']));
+        $this->view('admin/list-book-request', array('listBookRequest' => $RequestBookModel->getAllRequest()));
+        $this->view('template/admin/footer');
+    }
+
+
 }
 
 ?>

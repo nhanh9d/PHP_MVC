@@ -29,7 +29,8 @@ var jsAdmin = {
                             fullname:fullname,
                             password:password,
                             status:status
-                        }
+                        },
+                        type:'POST'
                     }).done((data)=>{
                         $('span.message.success').html(data);
                         $('div.form-group.has-success').removeClass('hidden');

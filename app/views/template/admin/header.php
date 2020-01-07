@@ -37,7 +37,7 @@
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
-        
+
         <header class="main-header">
 
             <!-- Logo -->
@@ -144,8 +144,8 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Danh sách khách hàng</a></li>
-                            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Yêu cầu thêm đầu sách</a></li>
+                            <li><a href="/admin/listUser"><i class="fa fa-circle-o"></i> Danh sách khách hàng</a></li>
+                            <li><a href="/admin/listBookRequest"><i class="fa fa-circle-o"></i> Yêu cầu thêm đầu sách</a></li>
                             <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Phản hồi</a></li>
                             <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Phản hồi</a></li>
                         </ul>
