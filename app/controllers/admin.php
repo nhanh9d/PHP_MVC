@@ -31,13 +31,12 @@ class Admin extends Controller {
         $result = $this->model('AdminModel')->getAdmin($username,$password);
         if(!empty($result)){
             $_SESSION['admin'] = $result;
+            $_SESSION['noUserFound'] = null;
             header('Location: /admin');
         }
         else{
-            $viewData = array(
-                'noUserFound' => 'Không có người dùng '.$username
-            );
-            $this->view('admin/login', $viewData);
+            $_SESSION['noUserFound'] = 'Không có người dùng '.$username;
+            header('Location: /admin/login');
         }
     }
     function doLogout () {
