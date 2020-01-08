@@ -96,20 +96,20 @@
                 <h4 class="modal-title">Thêm đầu sách</h4>
             </div>
             <div class="modal-body">
-                <form role="form">
+                <form role="form" id="add-book-form" action="" method="post" enctype="multipart/form-data">
                     <div class="row">
                         <div class="col-xs-12 col-md-6">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>Tên đăng nhập</label>
-                                <input type="text" class="form-control" name="add-username" id="add-username" placeholder="Enter ...">
+                                <label>Tiêu đề</label>
+                                <input type="text" class="form-control" name="add-title" id="add-title" placeholder="Enter ...">
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>Họ và tên</label>
-                                <input type="text" class="form-control" name="add-fullname" id="add-fullname" placeholder="Enter ...">
+                                <label>Tác giả</label>
+                                <input type="text" class="form-control" name="add-author" id="add-author" placeholder="Enter ...">
                             </div>
                         </div>
                     </div>
@@ -117,27 +117,42 @@
                         <div class="col-xs-12 col-md-6">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>Mật khẩu</label>
-                                <input type="password" class="form-control" name="add-password" id="add-password" placeholder="Enter ...">
+                                <label>Nhà xuất bản</label>
+                                <input type="text" class="form-control" name="add-publisher_name" id="add-publisher_name" placeholder="Enter ...">
                             </div>
                         </div>
                         <div class="col-xs-12 col-md-6">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>Nhắc lại mật khẩu</label>
-                                <input type="password" class="form-control" name="add-confirm-password" id="add-confirm-password" placeholder="Enter ...">
+                                <label>Đường dẫn</label>
+                                <input type="text" class="form-control" name="add-isbn_no" id="add-isbn_no" placeholder="Enter ...">
                             </div>
                         </div>
                     </div>
-
-                    <!-- select -->
-                    <div class="form-group">
-                        <label>Trạng thái</label>
-                        <select class="form-control" name="add-status" id="add-status">
-                            <option value="1">Đang hoạt động</option>
-                            <option value="2">Ngừng hoạt động</option>
-                            <option value="3">Cấm sử dụng</option>
-                        </select>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label>Ảnh bìa</label>
+                                <input type="file" class="form-control" name="add-cover_image" id="add-cover_image" placeholder="Enter ...">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label>Ảnh đại diện</label>
+                                <input type="file" class="form-control" name="add-subclass_3" id="add-subclass_3" placeholder="Enter ...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label>Mô tả</label>
+                                <textarea name="add-description" id="add-description" class="form-control" rows="10" cols="70"></textarea>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="form-group has-success hidden">
