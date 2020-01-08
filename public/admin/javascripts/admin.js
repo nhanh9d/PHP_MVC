@@ -36,7 +36,6 @@ var jsAdmin = {
                         },
                         type:'POST'
                     }).done((data)=>{
-                        debugger
                         data = JSON.parse(data);
                         if (data.isSuccess) {
                             $('span.message.success').html(data.message);

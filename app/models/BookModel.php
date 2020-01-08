@@ -27,7 +27,7 @@ class BookModel extends Model {
     function addNewBook($title, $author, $publisher_name, $isbn_no, $description, $cover_image, $subclass_3){
         $sql = 'INSERT INTO book(copies, copyright_year, date_received, title, author, publisher_name, place_publication, isbn_no, category_id, availability, subject, cover_image, subclass_3, subclass_4, description, status, call_number, section)
         VALUES ("",2019,"",:title,:author,:publisher_name,"",:isbn_no,1,"Đang nhập về","",:cover_image,:subclass_3,"",:description,"","","")';
-        $data = array('title' => $title, $author, $publisher_name, $isbn_no, $description, $cover_image, $subclass_3);
+        $data = array(':title' => $title, ':author' => $author, ':publisher_name' => $publisher_name, ':isbn_no' => $isbn_no, ':description' => $description, ':cover_image' => $cover_image, ':subclass_3' => $subclass_3);
         $prepare = $this->db->prepare($sql);
         $prepare->execute($data);
         return $prepare->rowCount();
