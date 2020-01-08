@@ -56,7 +56,9 @@ class Admin extends Controller {
         $this->view('template/admin/footer');
     }
 
-    function addSysUser(){
+    function registerAdmin(){
+        $message = '';
+        $isSuccess = false;
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
         }
@@ -69,19 +71,25 @@ class Admin extends Controller {
         if (isset($_POST['status'])) {
             $status = $_POST['status'];
         }
-        else if(!is_null($username) && !is_null($password))
+        if(!is_null($username) && !is_null($password))
         {
             $adminModel = $this->model('AdminModel');
 
-            $isSuccess = $adminModel->registerAdmin($username, $fullname, $password, $status);
-            if ($isSuccess) {
-                $message = 'Đăng ký thành công';
+            $userCount = $adminModel->checkExistedUser($username);
+            if (empty($userCount)) {
+                $isSuccess = $adminModel->registerAdmin($username, $fullname, $password, $status);
+                if ($isSuccess) {
+                    $message = 'Đăng ký thành công';
+                }
+                else{
+                    $message = 'Đăng ký không thành công';
+                }
             }
             else{
-                $message = 'Đăng ký không thành công';
+                $message = 'Đã có tài khoản có tên đăng nhập là '.$username;
             }
         }
-        print_r($message0);
+        print_r(json_encode(array('message'=>$message,'isSuccess'=>$isSuccess), JSON_UNESCAPED_UNICODE ));
     }
 
     function listUser(){

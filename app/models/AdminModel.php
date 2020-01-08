@@ -23,6 +23,14 @@ class AdminModel extends Model {
         $result = $prepare->fetchAll();
         return $result;
     }
+    function checkExistedUser($username){
+        $data = array(':username' => $username);
+        $sql = 'SELECT * FROM admin WHERE username = :username';
+        $prepare = $this->db->prepare($sql);
+        $prepare->execute($data);
+        $result = $prepare->fetch();
+        return $result;
+    }
     function registerAdmin($username, $fullname, $password, $status){
         $result = null;
         $data = array(':username' => $username, ':fullname' => $fullname, ':password' => md5($password), ':status' => $status);

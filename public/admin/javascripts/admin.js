@@ -17,8 +17,12 @@ var jsAdmin = {
                 var cfmpassword = $('#add-confirm-password').val();
                 var status = $('#add-status').val();
 
-                if (!username || !cfmname || !password) {
+                if (!username || !cfmpassword || !password) {
                     $('span.message.error').html('Không được để trống trường');
+                    $('div.form-group.has-error').removeClass('hidden');
+                }
+                else if(cfmpassword !== password){
+                    $('span.message.error').html('Mật khẩu và nhắc lại mật khẩu không trùng khớp');
                     $('div.form-group.has-error').removeClass('hidden');
                 }
                 else{
@@ -32,8 +36,16 @@ var jsAdmin = {
                         },
                         type:'POST'
                     }).done((data)=>{
-                        $('span.message.success').html(data);
-                        $('div.form-group.has-success').removeClass('hidden');
+                        debugger
+                        data = JSON.parse(data);
+                        if (data.isSuccess) {
+                            $('span.message.success').html(data.message);
+                            $('div.form-group.has-success').removeClass('hidden');
+                        }
+                        else{
+                            $('span.message.error').html(data.message);
+                            $('div.form-group.has-error').removeClass('hidden');
+                        }
                     }).fail((messsageError)=>{
                         $('span.message.error').html(data);
                         $('div.form-group.has-error').removeClass('hidden');

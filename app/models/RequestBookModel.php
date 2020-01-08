@@ -22,11 +22,11 @@ class RequestBookModel extends Model {
         return $result;
     }
     function AcceptRequestBook($requestId, $title){
-        processRequest($requestId, 1);
-        addNewBook($title);
+        $this->processRequest($requestId, 1);
+        $this->addNewBook($title);
     }
     function DeclineRequestBook($requestId){
-        processRequest($requestId, -1);
+        $this->processRequest($requestId, -1);
     }
     private function processRequest($requestId, $is_approved){
         $data = array(':book_request_id' => $requestId, ':is_approved' => $is_approved);
@@ -35,11 +35,24 @@ class RequestBookModel extends Model {
         $prepare->execute($data);
     }
     private function addNewBook($title){
-        $data = array(':book_title' => $title);
-        $sql = 'INSERT INTO book(copies, copyright_year, date_received, title, author, publisher_name, place_publication, isbn_no, category_id, availability, subject, cover_image, subclass_3, subclass_4, description, status, call_number, section)
-        VALUES ("",0,"",:book_title,"","","","",0,"","","","default-book-cover.png","","","","","")';
-        $prepare = $this->db->prepare($sql);
-        $result = $prepare->execute($data);
+        if (empty($this->checkExistedBook($title))) {
+            $data = array(':book_title' => $title);
+            $sql = 'INSERT INTO book(copies, copyright_year, date_received, title, author, publisher_name, place_publication, isbn_no, category_id, availability, subject, cover_image, subclass_3, subclass_4, description, status, call_number, section)
+            VALUES ("",0,"",:book_title,"","","","",1,"","","","default-book-cover.png","","","","","")';
+            $prepare = $this->db->prepare($sql);
+            $result = $prepare->execute($data);
+        }
+    }
+    private function checkExistedBook($bookTitle){
+      $result = null;
+      $sql = 'SELECT * FROM book WHERE title = :title';
+      $data = array(':title' => $bookTitle);
+      $prepare = $this->db->prepare($sql);
+      $response = $prepare->execute($data);
+      if ($response) {
+        $result = $prepare->fetchAll();
+      }
+      return $result;
     }
 }
 

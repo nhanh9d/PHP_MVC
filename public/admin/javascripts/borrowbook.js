@@ -13,8 +13,9 @@ var jsBorrowBook= {
                     },
                     type:'POST'
                 }).done((data)=>{
-                    $(`a.btn-accept-request[data-request-id=='${requestId}']`).addClass('disabled');
-                    $(`a.btn-decline-request[data-request-id=='${requestId}']`).addClass('hidden');
+                    $(`a.btn-accept-request[data-request-id='${requestId}']`).addClass('disabled');
+                    $(`a.btn-accept-request[data-request-id='${requestId}']`).html('Đã thêm');
+                    $(`a.btn-decline-request[data-request-id='${requestId}']`).addClass('hidden');
                 }).fail((messsageError)=>{
                 });
             });
@@ -28,8 +29,9 @@ var jsBorrowBook= {
                     },
                     type:'POST'
                 }).done((data)=>{
-                    $(`a.btn-decline-request[data-request-id=='${requestId}']`).addClass('disabled');
-                    $(`a.btn-accept-request[data-request-id=='${requestId}']`).addClass('hidden');
+                    $(`a.btn-decline-request[data-request-id='${requestId}']`).addClass('disabled');
+                    $(`a.btn-decline-request[data-request-id='${requestId}']`).html('Đã từ chối');
+                    $(`a.btn-accept-request[data-request-id='${requestId}']`).addClass('hidden');
                 }).fail((messsageError)=>{
                 });
             });
